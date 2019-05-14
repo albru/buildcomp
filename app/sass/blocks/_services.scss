@@ -1,0 +1,69 @@
+
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.ourworks {
+  &-cont {
+    min-height: 650px;
+  }
+  &-title {
+    color: $white;
+    text-transform: uppercase;
+    font-family: $rob;
+    padding: $padding15;
+    margin: $margin15;
+  }
+  
+&-card {
+  position: relative;
+  padding: $padding10;
+  transition: all .4s;
+  will-change: transform;
+  min-height: 400px;
+  @include tablets {
+   margin-bottom: 30px;
+  }
+    &__title {
+      margin-top: $margin15;
+      margin-bottom: 0;
+      font-family: $rob;
+      color: $blackTT;
+    }
+  }
+  &-btn {
+    width: 200px;
+    color: $white;
+    font-family: $rob;
+    text-transform: uppercase;
+    background-color: $orange;
+    margin-bottom: $margin10; 
+    clip-path: $btnclip;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    transition: all 1s;
+    &:hover {
+      background-color: darken($orange, 8%);
+    }
+  }
+}
+
+
+
+.card-text {
+  padding: $padding15;
+}
+
+.card-body {
+  & > img {
+    border-radius: rem(3px);
+  }
+  @include tablets {
+    text-align: center;
+  }
+}
+

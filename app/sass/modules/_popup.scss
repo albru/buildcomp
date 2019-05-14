@@ -1,0 +1,197 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+@import "../animation/anim.scss";
+
+
+.popup-privacy {
+  padding: $padding10;
+  background-color: $black;
+  border-radius: rem(3px);
+  &-cont {
+    color: $white;
+    position: absolute;
+    top: 75%;
+    left: 0;
+    font-size: rem(10px);
+    display: none;
+    @include desktop {
+      top: 79%;
+    }
+  }
+}
+
+.popup {
+  &-cont {
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+    overflow:hidden;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    z-index: 30;
+  }
+  &-wrap {
+    display: none;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    left: 50%;
+    transform: translateX(-46%);
+    z-index: 30;
+    @include laptop {
+      width: 70%;
+    }
+    @include phones {
+      width: 80%;
+    }
+    @include phones-min {
+      width: 95%;
+    }
+    &__cont {
+      position: absolute;
+      will-change: opacity;
+      will-change: transform;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: popup ease-in-out .3s forwards;
+    }
+  }
+  &__form {
+    text-transform: uppercase;
+    padding: rem(40px);
+    color: $black;
+    background-color: $white;
+    border-radius: rem(10px);
+    @include phones-min {
+      padding: 15px;
+    }
+    &-cont {
+ 
+    }
+    &-fieldset {
+      position: relative;
+    }
+    &-legend {
+      margin-bottom: $margin15;
+      font-family: $rob;
+      color: blackTT;
+    }
+    &-lbl {
+      white-space: nowrap;
+      position: relative;
+      cursor: pointer;
+      transition: all .3s;
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 70%;
+        height: 2px;
+        background-color: $black;
+        @include phones-min {
+          display: none;
+        }
+      }
+    }
+    &-checklbl {
+      color: $gray;
+      margin-bottom: 0;
+      @include phones {
+        width: 180px;
+      }
+    }
+    &-privacy {
+      border-bottom: 1px solid $gray;
+      cursor: help;
+      color: $gray;
+      margin-left: rem(3px);
+    }
+    &-checkbox {
+      margin-right: 10px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      @include phones {
+        margin-top: -15px;
+      }
+    }
+    &-btn {
+      background-color: $orange;
+      color: $white;
+      text-transform: uppercase;
+      font-family: $rob;
+      margin: $margin10;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($orange, 8%);
+      }
+    }
+  }
+  &-exit {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    z-index: 32;
+    padding: $padding10;
+    cursor: pointer;
+    @include phones-min {
+      top: 2%;
+    }
+    &:after {
+      position: absolute;
+      content:'';
+      top: 0;
+      width: 2px;
+      height: 15px;
+      background-color: $gray;
+      transform: rotate(45deg);
+      @include tablets {
+        height: 25px;
+        width: 2px;
+      }
+    }
+    &:before {
+      position: absolute;
+      content:'';
+      top: 0;
+      width: 2px;
+      height: 15px;
+      background-color: $gray;
+      transform: rotate(-45deg);
+      @include tablets {
+        height: 25px;
+        width: 2px;
+      }
+    }
+  }
+  &__input-text:focus {
+    outline: none;
+    border: 1px solid $orange;
+  }
+  &__DoneJS {
+    opacity: 0;
+    @include phones-min {
+
+    }
+    & > i {
+      font-size: 25px;
+    }
+  }
+  &__DoneJS1 {
+    opacity: 0;
+    @include phones-min {
+      flex-direction: column!important;
+      align-items: center!important;
+    }
+    & > i {
+      font-size: 25px;
+    }
+  }
+}

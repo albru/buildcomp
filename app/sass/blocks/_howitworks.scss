@@ -1,0 +1,153 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.howitworks-left__new-tech {
+  font-family: $rob;
+  color: $blackTT;
+  & > span {
+    color: $orange;
+  }
+}
+
+.howitworks-left__desc-text {
+ margin-top: 30px;
+}
+
+// JS STYLES BOTTOM
+
+.main-wrap {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.howitworks {
+  &-cont {
+    min-height: 650px;
+    position: relative;
+    @include phones-min {
+      display: none;
+    }
+  }
+  &-wrap {
+    position: relative;
+  }
+  &-left {
+    position: relative;
+    margin-top: $margin25;
+    &__img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+    &__desc {
+      background-color: $white;
+      width: 70%;
+      min-height: 350px;
+      padding: $padding20;
+      border-radius: rem(3px);
+    }
+  }
+  &-right {
+      color: $white;
+      padding: $padding15;
+      margin-top: $margin25;
+    &__cont {
+      position: relative;
+    }
+    &__title {
+      color: $white;
+      font-family: $rob;
+      padding: $padding15;
+      margin-top: $margin15;
+      text-transform: uppercase;
+    }
+    &__tab {
+      text-transform: uppercase;
+      font-family: $rob;
+      color: $blackTT;
+      border-radius: initial;
+      background-color: $white;
+      position: relative;
+      border: none;
+      margin-bottom: $margin10;
+      cursor: pointer;
+      text-align: left;
+      padding-left: $padding100;
+      @include laptop {
+        padding-left: 60px;
+      }
+      @include tablets {
+        padding-left: 60px;
+      }
+      @include phones {
+        padding-left: 50px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 20%;
+        background-color: $orange;
+        clip-path: polygon(0 0, 100% 0%, 66% 100%, 0% 100%);
+        transition: all .3s;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: rem(10px);
+        height: rem(10px);
+        border-right: 3px solid $white;
+        border-bottom: 3px solid $white;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        transition: all .3s;
+        will-change: transform;
+      }
+    }
+    &__line {
+      width: 120px;
+      height: 2px;
+      border: 2px dashed $orange;
+      position: absolute;
+      top: 50%;
+      left: -39%;
+      z-index: 1;
+      transition: all .3s;
+      opacity: 0;
+      @include laptop {
+        width: 50px;
+        left: -22%;
+      }
+      @include tablets {
+        display: none;
+      }
+    }
+  }
+}
+
+.js-tab-active {
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(10px);
+    height: rem(10px);
+    border-right: 3px solid $white;
+    border-bottom: 3px solid $white;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+  }
+  &::before {
+    background-color: darken($orange, 8%);
+  }
+}
+
+.js-line-active {
+  opacity: 1;
+}

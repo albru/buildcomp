@@ -1,0 +1,32 @@
+.popup-cont
+.popup-wrap
+  .row.col-lg-12.popup-wrap__cont
+    .popup-exit
+      .popup-exit__btn 
+    form#submit-form(method="post", action="server.php").col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12.popup__form.text-center
+      fieldset.popup__form-fieldset
+        legend.popup__form-legend Оставьте заявку 
+        input.hidden-input(type='hidden', name='project_name', value='autopodbor')
+        input.hidden-input(type='hidden', name='admin_email', value='order@autoright.ru')
+        input.hidden-input(type='hidden', name='form_subject', value='Заявка на автоподбор')
+        .form-group.row.d-flex.justify-content-center
+          label.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-form-label.popup__form-lbl(for='name1') Ваше имя
+          input#name1.name.popup__input-text.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-8.form-control(type='text', placeholder='Имя', name='name' required)
+        .form-group.row.d-flex.justify-content-center
+          label.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-form-label.popup__form-lbl(for='phone1') Ваш телефон
+          input#phone1.phone.popup__input-text.col-xl-6.col-lg-6.col-md-6.col-sm-6.col-8.form-control(type='tel', placeholder='Телефон', name='phone' required)
+        button#btn-submit-form.btn.popup__form-btn(type='submit') Отправить
+        .form-group.popup__form-cont.col-xl-12.d-flex.justify-content-center.align-items-center
+          input.popup__form-checkbox(type="checkbox" value="" id="form-check-input1" required checked)
+          .popup__form-checklbl Я прочитал и согласен с 
+            span.popup__form-privacy обработкой данных
+        .form-group.col-xl-12.popup__DoneJS
+          .popup__success 
+            i(class="icon-ok", style="color: green;")
+            span Спасибо! Мы свяжемся с Вами в ближайшее время.
+        //- styles in popup.scss
+        //- js code in buttons.js
+        .popup-privacy-cont
+            p.popup-privacy Настоящим вы выражаете свое согласие для использования продавцом или уполномоченным лицом продавца ваших персональных данных, в том числе путем осуществления автоматизированного анализа персональных данных, а также на их передачу различными способами, без ограничения срока действия. В соответствии с п. 5 ст. 21 ФЗ «О персональных данных» настоящее согласие может быть отозвано только при условии письменного уведомления на почту не менее чем за 5 календарных дней до предполагаемой даты прекращения использования персональных данных .
+        include ../modules/spinner-ring
+

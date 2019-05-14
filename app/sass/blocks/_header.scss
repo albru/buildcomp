@@ -1,0 +1,178 @@
+@import "../misc/functions";
+@import "../misc/media";
+@import "../misc/mixins";
+@import "../misc/variables";
+
+.logo1, 
+.logo2 {
+  font-family: 'russo', Helvetica, sans-serif;
+  font-size: $logo_big;
+  @include laptop {
+    font-size: $logo_med;
+  }
+  @include tablets {
+    font-size: $logo_small;
+  }
+}
+.logo1 {
+  color: $white;
+}
+.logo2 {
+  color: $orange;
+}
+// JS position condition in scroll.js
+
+.header-wrap {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  @include laptop {
+    position: static;
+  }
+}
+
+.header {
+  padding: 0;
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  &-logo {
+    @include tablets {
+      justify-content: flex-start!important;
+    }
+    @include phones-min {
+      justify-content: center!important;
+    }
+  }
+  &-logo > img {
+    width: 300px;
+    @include laptop {
+      width: 200px;
+    }
+    @include phones {
+      margin-left: 0;
+    }
+    @include phones-min {
+      width: 130px;
+    }
+  }
+  &-container {
+    background-color: $black;
+    border-bottom: 1px solid $white;
+  }
+  &-socials {
+    position: relative;
+    @include tablets {
+      padding-right: 0;
+      justify-content: center;
+    }
+    @include phones {
+      align-items: center;
+      justify-content: center!important;
+    }
+    &:after {
+      content:'';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(2px);
+      height: rem(15px);
+      background-color: $gray;
+      @include phones {
+        display: none;
+      }
+    }
+    &-icon {
+      color: $white;
+      transition: all .3s;
+      margin: 0;
+      transition: all .3s;
+      &:hover {
+        color: $orange;
+      }
+    }
+    &__item {
+      display: inline-block;
+      margin-right: rem(15px);
+    }
+  }
+  &-worktime {
+    color: $white;
+    position: relative;
+    & > i {
+      @include tablets {
+        display: none;
+      }
+    }
+    @include phones {
+      display: none!important;
+    }
+    &:after {
+      content:'';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(2px);
+      height: rem(15px);
+      background-color: $gray;
+    }
+    &__item {
+      padding: $padding10;
+    }
+  }
+  &-phone {
+    color: $white;
+    font-family: 'russo', Helvetica, sans-serif;
+    padding: $padding10;
+    transition: all .3s;
+    // & > i {
+    //   @include phones-min {
+    //     display: none;
+    //   }
+    // }
+    @include phones-min {
+      padding-top: 0;
+    }
+    &-cont {
+      @include phones {
+        justify-content: center!important;
+        padding-right: 25px;
+      }
+      @include phones-min {
+      padding: 0;
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+    &:hover > .whatsapp {
+      color: $orange;
+    }
+    &:focus {
+      color: $orange;
+      text-decoration: none;
+    }
+    & > .whatsapp {
+      margin-left: $margin10;
+    }
+  }
+  &-tablets {
+    @include phones-min {
+      width: 500px;
+    }
+    @include phones {
+      justify-content: flex-end;
+    }
+  }
+}
+
+
+    

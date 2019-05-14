@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    title AUTORIGHT.ru - Подбор автомобилей в Санкт - Петербурге.
+    meta(name="description", content="Подбор автомобилей в Санкт - Петербурге. Оставьте заявку в один клик, и мы найдем для Вас лучший вариант! Опытные эксперты, официальный договор, гарантия 1 месяц! Подбираем авто в спб с 2016 года.")
+    meta(name="keywords", content="Подбор авто спб, подбор авто, автоподбор спб, подбор бу авто, подбор авто санкт петербург, автоподбор сайты, автоподбор цена, услуги автоподбора, автоподбор 2018")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="shortcut icon", href="img/autoright.png")
+    link(rel="stylesheet", href="css/libs.min.css")
+    link(rel="stylesheet", href="css/main.css")
+  body.body
+    .wrapper
+      header.header-wrap
+        include pug/blocks/header
+      main.main-wrap
+        include pug/blocks/greetings
+        include pug/blocks/howitworks
+        include pug/blocks/features
+        include pug/blocks/services
+        include pug/blocks/ourcustomers
+      footer.footer
+        include pug/blocks/footer
+    include pug/modules/popup
+    include pug/modules/spinner
+    script(src="js/libs.min.js") 
+    script(src="js/bundle.js")
+        //- Yandex.Metrika counter
+    script.
+      (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+      ym(50789317, "init", {
+      id:50789317,
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+      });
+    //- Yandex.Metrika counter
+    //- Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-131735115-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-131735115-1');
+    //- Global site tag (gtag.js) - Google Analytics
+    // BEGIN JIVOSITE CODE {literal}
+    script.
+      (function(){ var widget_id = 'zLHwArXlbE';var d=document;var w=window;function l(){
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    // {/literal} END JIVOSITE CODE
+ 

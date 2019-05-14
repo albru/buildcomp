@@ -1,0 +1,92 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.footer-phones__media-link {
+  @include phones {
+    display: none;
+  }
+}
+
+.footer {
+  color: $gray;
+  &-desc {
+    @include tablets {
+      justify-content: flex-start!important;
+      align-items: center!important;
+      text-align: center;
+    }
+    & > p {
+      margin: 0;
+    }
+    & > h3 {
+      margin: 0;
+    }
+  }
+  &-cont {
+    min-height: 325px;
+    background-image: url('../img/footer-min.jpg');
+    background-size: cover;
+    background-position: center center;
+    border-top: 1px solid $white;
+  }
+  &-section-title {
+    font-family: 'russo', Helvetica, sans-serif;
+    padding: $padding10;
+  }
+  &-section-desc {
+    padding: $padding10;
+  }
+  &-info {
+    padding: $padding10;
+    &__item {
+      &-link {
+        color: $gray;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover {
+          color: $white;
+        }
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+  }
+  &-contacts {
+    &__phone {
+        margin-right: $margin10;
+        margin-bottom: $margin10;
+        color: $white;
+        font-size: rem(20px);
+        color: $white;
+        font-family: 'russo', Helvetica, sans-serif;
+        padding: $padding10;
+        transition: all .3s;
+        @include tablets {
+          margin-right: 0;
+        }
+        &:hover {
+          text-decoration: none;
+          color: $orange;
+        }
+        &:hover > .whatsapp {
+          color: $orange;
+        }
+        &:focus {
+          color: $orange;
+          text-decoration: none;
+        }
+    }
+  }
+  &-socials-icon {
+    margin: 0 $margin10;
+    color: $white;
+    transition: all .3s;
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
+}

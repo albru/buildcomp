@@ -1,0 +1,54 @@
+//- JS padding in scroll.js
+.container-fluid.header-second.header-second__container(id="greetings")
+  .row.header-second__row
+    .col-lg-6.header-second__container--left
+      .row
+        .col-lg-3.offset-md-6.header-second__btn-cont
+          a.btn.header-second__btn Экономия времени и денег
+      .row
+        .col-lg-3.offset-md-4.header-second__btn-cont
+          a.btn.header-second__btn Бесплатные консультации
+      .row
+        .col-lg-3.offset-md-2.header-second__btn-cont
+          a.btn.header-second__btn Официальный договор
+      .row
+        .col-lg-3.offset-md-1.header-second__btn-cont
+          a.btn.header-second__btn Индивидуальный подход
+      .row
+        .col-lg-3.offset-md-2.header-second__btn-cont
+          a.btn.header-second__btn Опытные cпециалисты
+      .row
+        .col-lg-3.offset-md-4.header-second__btn-cont
+          a.btn.header-second__btn Гарантия 1 месяц
+    .col-lg-6.offset.header-second__container--right
+      .container-fluid
+        .row
+          h1.title-keywords помощь в покупке авто, подбор авто спб, подбор авто с пробегом, помощь в покупке авто спб, авто подбор спб, подбор бу авто, услуги по подбору авто, помощь в покупке бу авто, помощь при покупке бу авто, помощь в покупке авто с пробегом, эксперт по подбору авто, услуги автоэксперта при покупке авто, помощь в подборе авто спб, специалист по подбору авто, помощь в подборе бу авто, компания по подбору авто, помощь покупки авто, услуги эксперта при покупке авто, услуги подбора авто, подбор подержанных автомобилей, подбор подержанного автомобиля, подбор авто бу, фирма по подбору автомобиля, подбор авто, автоподбор, подбор авто по параметрам, авто подбор, автоподбор спб, подбор автомобиля с пробегом, помощь в подборе авто, autoright, autoright.ru
+          h2.col-lg-12.text-center.header-second__title Подбор авто в СПб по Вашим параметрам
+        .row.d-flex.justify-content-center
+          form#submit-form1.col-xl-8.col-lg-10.col-md-7.col-sm-10.col-10.header-second__form.text-center
+            fieldset.header-second__form-fieldset
+              legend.header-second__form-legend Оставьте заявку 
+              input.hidden-input(type='hidden', name='project_name', value='autopodbor')
+              input.hidden-input(type='hidden', name='admin_email', value='order@autoright.ru')
+              input.hidden-input(type='hidden', name='form_subject', value='Заявка на автоподбор')
+              .form-group.row.d-flex.justify-content-center
+                label.col-lg-6.col-md-6.col-sm-6.col-12.col-form-label.header-second__form-lbl(for='name') Ваше имя
+                input#name.header-second__input-text.col-lg-6.col-md-6.col-sm-6.col-8.form-control(type='text', placeholder='Имя', name='name' required)
+              .form-group.row.justify-content-center
+                label.col-lg-6.col-md-6.col-sm-6.col-12.col-form-label.header-second__form-lbl(for='phone') Ваш телефон
+                input#phone.header-second__input-text.col-lg-6.col-md-6.col-sm-6.col-8.form-control(type='tel', name='phone', placeholder='Телефон' required)
+              button.btn.header-second__form-btn(type='submit') Отправить 
+              .form-group.col-xl-12
+                input.header-second__form-checkbox(type="checkbox" value="" id="form-check-input" required checked)
+                span.header-second__form-checklbl Я прочитал и согласен с 
+                span.header-second__form-privacy обработкой данных
+              .form-group.col-xl-12.d-flex.justify-content-center.align-items-baseline.popup__DoneJS1
+                .popup__success 
+                  i(class="icon-ok", style="color: #6ca;")
+                  span Спасибо! Мы свяжемся с Вами в ближайшее время.
+                  //- styles in popup.scss
+                  //- js code in buttons.js
+              .privacy-cont
+                p.privacy Настоящим вы выражаете свое согласие для использования продавцом или уполномоченным лицом продавца ваших персональных данных, в том числе путем осуществления автоматизированного анализа персональных данных, а также на их передачу различными способами, без ограничения срока действия. В соответствии с п. 5 ст. 21 ФЗ «О персональных данных» настоящее согласие может быть отозвано только при условии письменного уведомления на почту не менее чем за 5 календарных дней до предполагаемой даты прекращения использования персональных данных .
+              include ../modules/spinner-ring

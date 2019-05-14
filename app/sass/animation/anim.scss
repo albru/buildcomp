@@ -1,0 +1,23 @@
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+    top: -30%;
+  }
+  100% {
+    opacity: 1;
+    top: 20%;
+  }
+}
+
+// @keyframes btnsShow {
+//   100% {
+//     left: 0px;
+//   }
+// }
+
