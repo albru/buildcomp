@@ -1,0 +1,13 @@
+@import "../misc/functions";
+@import "../misc/media";
+@import "../misc/mixins";
+@import "../misc/variables";
+
+.header-goods {
+    font-family: $fira;
+    &_item-link {
+        color: $white;
+        position: relative;
+        overflow: hidden;
+    }
+}
