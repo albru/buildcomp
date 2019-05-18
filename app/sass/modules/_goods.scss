@@ -4,10 +4,13 @@
 @import "../misc/variables";
 
 .header-goods {
-    font-family: $fira;
     &_item-link {
         color: $white;
         position: relative;
         overflow: hidden;
+    }
+    &_item:before {
+        content: url('../../img/goods_icon/do.png');
+        margin-right: 10px;
     }
 }

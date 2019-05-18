@@ -1,0 +1,34 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.footer {
+  padding-top: rem(20px);
+  background-color: $green;
+  color: $white;
+  border-top: 2px solid #3D4D47;
+  &-cont {
+    margin-top: rem(20px);
+      &_contacts {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: rem(20px);
+      }
+  }
+  & ul > li > a {
+    color: $white;
+    &:hover, :focus, :active {
+      color: $darkgreen;
+    }
+  }
+  &-rules {
+    &_cont {
+      text-align: center;
+    }
+    &_text {
+      margin-bottom: 0;
+    }
+  }
+}
+

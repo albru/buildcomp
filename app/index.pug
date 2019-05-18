@@ -12,10 +12,11 @@ html(lang="ru")
     link(rel="stylesheet", href="css/main.css")
   body.body
     .wrapper
-      header.header-wrap.section
-        include pug/blocks/header
-      main.main-wrap.section
+      include pug/blocks/header
+      .first.first-wrap.section
+        include pug/sections/first
       footer.footer
+        include pug/blocks/footer
     script(src="js/libs.min.js") 
     script(src="js/bundle.js")
         //- Yandex.Metrika counter
