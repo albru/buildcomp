@@ -1,0 +1,34 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.news {
+  &-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: rem(20px);
+  }
+  &-card {
+    box-shadow: 7px 9px 12px -8px $gray;
+  }
+  &-header_cont {
+    background-color: $green;
+    color: $white;
+  }
+  &-body_cont {
+    margin: rem(20px);
+  }
+  &-date {
+    margin: 0 rem(20px);
+    color: #62BFD9;
+    &_cont {
+      text-align: right;
+
+    }
+  }
+  &-title_cont {
+    @include flex();
+  }
+}

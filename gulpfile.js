@@ -37,8 +37,8 @@ const src = {
   baseApp: 'app/',
   baseDist: 'dist/',
   htmlTake: [
-    'app/index.html',
-    'app/pug/pages/*.html'
+    'app/*.html',
+    'app/pages/*.html'
   ],
   pugTake: 'app/**/*.pug',
   scssTake: 'app/sass/**/*.scss',

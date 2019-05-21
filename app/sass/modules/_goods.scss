@@ -3,14 +3,51 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
-.header-goods {
-    &_item-link {
-        color: $white;
-        position: relative;
-        overflow: hidden;
-    }
-    &_item:before {
-        content: url('../../img/goods_icon/do.png');
-        margin-right: 10px;
+@for $i from 0 through 11 {
+    .goods-item_icon#{$i} {
+        background: url('../img/goods_icon/cat#{$i}.png') center center no-repeat;
     }
 }
+
+.goods {
+    &-cont {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        position: relative;
+        &:hover .goods-item_icon {
+            background-color: $darkgreen;
+        }
+        &:hover .goods-item_link {
+            color: $darkgreen;
+        }
+        &_link {
+            font-size: rem(20px);
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            font-family: $fira;
+            color: $gray;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: rem(20px);
+        }
+    }
+    &-item:before {
+        margin-right: 10px;
+        background-color: $green;
+    }
+    &-item_icon {
+        display: inline-block;
+        width: 44px;
+        transition: all .3s;
+        height: 44px;
+        background-color: $green;
+        border-radius: 5px;
+        position: absolute;
+        top:-10px;
+        left: -50px;
+    }
+}
+

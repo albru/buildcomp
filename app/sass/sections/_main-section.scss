@@ -1,0 +1,29 @@
+@import "../misc/variables";
+@import "../misc/functions";
+@import "../misc/mixins";
+@import "../misc/media";
+
+.main {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-around;
+  }
+  &-title {
+    &_cont {
+      @include flex();
+    }
+  }
+  &-guarantee {
+    @include flex();
+    &_years {
+      font-size: rem(100px);
+      color: $darkgreen;
+      float: left;
+    }
+    &_desc{
+      margin-left: rem(10px);
+    }
+  }
+}

@@ -5,8 +5,12 @@
 @import "base/fonts";
 // @import "animation/anim";
 @import "base/layout";
-@import "blocks/first";
-@import "blocks/main";
+@import "sections/first-section";
+@import "sections/main-section";
+@import "sections/news-section";
+@import "sections/catalog-section";
+@import "sections/docs-section";
+@import "sections/contacts-section";
 @import "blocks/header";
 // @import "blocks/greetings";
 @import "modules/nav";

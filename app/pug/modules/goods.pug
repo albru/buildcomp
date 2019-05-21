@@ -1,34 +1,24 @@
-.col-xs-4
-    ul.header-goods_list
-        li.header-goods_item
-            a.header-goods_item-link(href="") Дорожные ограждения
-        li.header-goods_item
-            a.header-goods_item-link(href="") Автопавильоны
-        li.header-goods_item
-            a.header-goods_item-link(href="") Фундаменты
-        li.header-goods_item
-            a.header-goods_item-link(href="") Емкости для хранения
-        li.header-goods_item
-            a.header-goods_item-link(href="") Краска для дорожной разметки
-.col-xs-4
-    ul.header-goods_list
-        li.header-goods_item
-            a.header-goods_item-link(href="") Мостовые ограждения
-        li.header-goods_item
-            a.header-goods_item-link(href="") Дорожные знаки
-        li.header-goods_item
-            a.header-goods_item-link(href="") Оборудование навесное
-        li.header-goods_item
-            a.header-goods_item-link(href="") Производственное оборудование
-        li.header-goods_item
-            a.header-goods_item-link(href="") Битум
-.col-xs-4
-    ul.header-goods_list
-        li.header-goods_item
-            a.header-goods_item-link(href="") Опоры освещения
-        li.header-goods_item
-            a.header-goods_item-link(href="") Гофрированные трубы
-        li.header-goods_item
-            a.header-goods_item-link(href="") Кронштейны
-        li.header-goods_item
-          a.header-goods_item-link(href="") Рамные конструкции
+.container
+  .row.goods-cont
+    .col-xs-3
+      - var count = 0;
+      - var count4 = 4;
+      - var count8 = 8
+      each val, index in ['Дорожные ограждения', 'Автопавильоны', 'Фундаменты', 'Емкости для хранения', 'Битум']
+        ul.goods-list
+            li.goods-item
+              a.goods-item_link(href='#')= val
+              .goods-item_icon(class=`goods-item_icon${count + index}`)
+    .col-xs-3
+      each val, index in ['Мостовые ограждения', 'Дорожные знаки', 'Оборудование навесное', 'Производственное оборудование']
+
+        ul.goods-list
+            li.goods-item
+              a.goods-item_link(href='#')= val
+              .goods-item_icon(class=`goods-item_icon${count4 + index}`)
+    .col-xs-3
+      each val, index in ['Опоры освещения', 'Гофрированные трубы', 'Кронштейны', 'Рамные конструкции']
+        ul.goods-list
+            li.goods-item
+              a.goods-item_link(href='#')= val
+              .goods-item_icon(class=`goods-item_icon${count8 + index}`)
