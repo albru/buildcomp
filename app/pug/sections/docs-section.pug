@@ -1,0 +1,27 @@
+.container.contacts-cont 
+  .row.contacts-title_cont
+    .col-xs-12
+      h1.contacts-title Документы
+  .row.tabs-wrap
+    .col-xs-12
+      nav
+        #nav-tab.nav.nav-tabs(role='tablist')
+          a#nav-gost1-tab.nav-item.nav-link.active(data-toggle='tab', href='#nav-gost1', role='tab', aria-controls='nav-gost1', aria-selected='true') ГОСТ Р 50971-96
+          a#nav-gost2-tab.nav-item.nav-link(data-toggle='tab', href='#nav-gost2', role='tab', aria-controls='nav-gost2', aria-selected='false') ГОСТ 8281-80
+          a#nav-gost3-tab.nav-item.nav-link(data-toggle='tab', href='#nav-gost3', role='tab', aria-controls='nav-gost3', aria-selected='false') ГОСТ 8282-83
+          a#nav-gost4-tab.nav-item.nav-link(data-toggle='tab', href='#nav-gost4', role='tab', aria-controls='nav-gost4', aria-selected='false') ГОСТ 2771-81
+          a#nav-gost5-tab.nav-item.nav-link(data-toggle='tab', href='#nav-gost5', role='tab', aria-controls='nav-gost5', aria-selected='false') ГОСТ 27772-88
+          a#nav-gost6-tab.nav-item.nav-link(data-toggle='tab', href='#nav-gost6', role='tab', aria-controls='nav-gost6', aria-selected='false') ГОСТ 9.307-89
+        #nav-tabContent.tab-content
+          #nav-gost1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-gost1-tab') 
+            embed.docs-cont(src='../pdf/1.pdf', width='ширина в пикселях', height='высота в пикселях')
+          #nav-gost2.tab-pane.fade(role='tabpanel', aria-labelledby='nav-gost2-tab') 
+            embed.docs-cont(src='../pdf/2.pdf', width='ширина в пикселях', height='высота в пикселях')
+          #nav-gost3.tab-pane.fade(role='tabpanel', aria-labelledby='nav-gost3-tab') 
+            embed.docs-cont(src='../pdf/3.pdf', width='ширина в пикселях', height='высота в пикселях')
+          #nav-gost4.tab-pane.fade(role='tabpanel', aria-labelledby='nav-gost4-tab') 
+            embed.docs-cont(src='../pdf/4.pdf', width='ширина в пикселях', height='высота в пикселях')
+          #nav-gost5.tab-pane.fade(role='tabpanel', aria-labelledby='nav-gost5-tab') 
+            embed.docs-cont(src='../pdf/5.pdf', width='ширина в пикселях', height='высота в пикселях')
+          #nav-gost6.tab-pane.fade(role='tabpanel', aria-labelledby='nav-gost6-tab') 
+            embed.docs-cont(src='../pdf/6.pdf', width='ширина в пикселях', height='высота в пикселях')

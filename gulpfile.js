@@ -65,7 +65,8 @@ const src = {
     'app/libs/csslibs/fontello/fontello.css'
   ],
   jsLibsTake: [
-    'node_modules/jquery/dist/jquery.js'
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/bootstrap/js/dist/tab.js'
   ],
 
   svgPut: 'app/img/sprites/',

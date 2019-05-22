@@ -2,3 +2,18 @@
 @import "../misc/media";
 @import "../misc/mixins";
 @import "../misc/variables";
+
+.contacts {
+  &-img {
+    background: url("../../img/map/contacts-map.jpg");
+    width: 100%;
+    height: 200%;
+    background-size: cover;
+  }
+  &-title_cont {
+    @include flex();
+  }
+  &-item > a {
+    color: inherit;
+  }
+}

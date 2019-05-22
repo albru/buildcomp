@@ -12,6 +12,9 @@
   }
   &-card {
     box-shadow: 7px 9px 12px -8px $gray;
+    &_wrap {
+      margin: rem(10px) 0;
+    }
   }
   &-header_cont {
     background-color: $green;

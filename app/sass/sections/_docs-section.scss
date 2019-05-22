@@ -2,3 +2,12 @@
 @import "../misc/functions";
 @import "../misc/mixins";
 @import "../misc/media";
+
+.tabs-wrap {
+  @include flex();
+}
+
+.docs-cont {
+  width: 1000px;
+  height: 1000px;
+}

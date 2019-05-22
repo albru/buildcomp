@@ -4,18 +4,25 @@
 @import "../misc/variables";
 @import "../animation/anim";
 
-.nav {
-  text-transform: uppercase;
-  @include flex();
-  &-cont{
+.nav-main {
+  &_cont {
     padding: 0;
   }
-  &-link {
+  &_item {
+    margin: 10px;
+  }
+  &_list{
+    text-transform: uppercase;
+    @include flex();
+    
+  }
+  &_link {
     color: $white;
     font-family: $russo;
     position: relative;
     overflow: hidden;
     transition: all .3s;
+    vertical-align: middle;
     &:hover, &:focus, &:active {
       color: $darkgreen;
 

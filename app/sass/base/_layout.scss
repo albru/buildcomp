@@ -31,6 +31,7 @@ body {
   min-width: 100%;
   min-height: 100%;
   color: $gray;
+
 }
 
 .wrapper {
@@ -47,6 +48,7 @@ body {
   position: relative;
   padding-bottom: rem(20px);
   padding-top: rem(20px);
+  overflow: hidden;
 }
 
 .section-margin {
