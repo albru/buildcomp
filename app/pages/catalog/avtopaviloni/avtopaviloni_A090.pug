@@ -1,0 +1,31 @@
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    title ООО ТЕХДОРИНВЕСТ - СТРОИТЕЛЬСТВО И ОСБСЛУЖИВАНИЕ ДОРОГ
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="shortcut icon", href="img/autoright.png")
+    link(rel="stylesheet", href="../../../css/libs.min.css")
+    link(rel="stylesheet", href="../../../css/main.css")
+  body.body
+    .wrapper
+      include ../catalog-blocks/header
+      .avtopaviloni_A070.avtopaviloni_A070_wrap.section.section-margin
+        .container.catalog-cont 
+          .row.catalog-title_cont
+            .col-xs-12
+              h1.catalog_title Автопавильоны Серия А090
+          .row
+            .col-xs-12
+              - var avtopaviloni_A070 = [{desc: 'Остановочный автопавильон А090-ОТ-Ц-Р 4.2м.'}]
+              .row
+                each val, index in avtopaviloni_A070
+                  .col-lg-3.col-xs-12.catalog-card_wrap
+                    .card.catalog-card
+                      .card-body.catalog-card_body-cont 
+                        img.catalog-card_img(src=`../../../img/catalog/avtopaviloni/avtopaviloni_A070/${index + 1}.jpg`)
+                      .card-footer.catalog-card_footer-cont= `${val.desc}`
+    script(src="../../../js/libs.min.js") 
+    script(src="../../../js/bundle.js")

@@ -12,8 +12,21 @@ html(lang="ru")
   body.body
     .wrapper
       include ../catalog-blocks/header
-      .dor-ogr.dor-ograzhd_wrap.section.section-margin
-      footer.footer
-        include ../catalog-blocks/footer
+      .kronshteini.kronshteini_wrap.section.section-margin
+        .container.catalog-cont 
+          .row.catalog-title_cont
+            .col-xs-12
+              h1.catalog_title Кронштейны
+              p.catalog_desc Кронштейн металлический предназначен для установки на опоры освещения разного типа. Кронштейны для светильников представлены в огромном разнообразии для того, чтобы сделать возможным размещение источника света относительно поверхности совершенно под любым углом, в зависимости от требуемых параметров
+          .row.catalog-goods_cont
+            .col-xs-12
+              - var kronshteini = [{desc: 'Кронштейны - "Флагман"'},{desc: 'Кронштейны Т-образные'},{desc: 'Кронштейны четырехрожковые'},{desc: 'Кронштейны трехрожковые'},{desc: 'Кронштейны двухрожковые'},{desc: 'Кронштейны однорожковые'}]
+              .row
+                each val, index in kronshteini
+                  .col-lg-3.col-xs-12.catalog-card_wrap
+                    .card.catalog-card
+                      .card-body.catalog-card_body-cont 
+                        img.catalog-card_img(src=`../../../img/catalog/kronshteini/${index + 1}.jpg`)
+                      .card-footer.catalog-card_footer-cont= `${val.desc}`
     script(src="../../../js/libs.min.js") 
     script(src="../../../js/bundle.js")

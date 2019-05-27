@@ -1,0 +1,35 @@
+@import "../misc/functions";
+@import "../misc/media";
+@import "../misc/mixins";
+@import "../misc/variables";
+
+.catalog {
+  &_title {
+    text-align: center;
+    &-h5 {
+      text-align: center;
+    }
+  }
+}
+
+.catalog-card {
+  box-shadow: 7px 9px 12px -8px $gray;
+  color: $white;
+  width: 100%;
+  &_img {
+    height: 200px;
+    max-width: 100%;
+    object-fit: contain;
+    padding: rem(10px);
+  }
+  &_wrap {
+    margin: rem(10px) 0;
+    min-width: rem(290px);
+  }
+  &_body-cont{
+    @include flex();
+  }
+  &_footer-cont {
+    background-color: $green;
+  }
+}

@@ -12,8 +12,21 @@ html(lang="ru")
   body.body
     .wrapper
       include ../catalog-blocks/header
-      .dor-ogr.dor-ograzhd_wrap.section.section-margin 
-      footer.footer
-        include ../catalog-blocks/footer
+      .bitum.bitum_wrap.section.section-margin
+        .container.catalog-cont 
+          .row.catalog-title_cont
+            .col-xs-12
+              h1.catalog_title Битум
+              p.catalog_desc Компания "Дорожные Системы" предлагает битум.
+          //- .row.catalog-goods_cont
+          //-   .col-xs-12
+          //-     - var dor_2 = [{desc: 'Емкость металлическая, объемом oт 2,5 м3 до 100 м3'},{desc:'Емкость металлическая, объемом oт 2,5 м3до 100 м3'},{desc:'Емкости дренажные по ГП 890.00.00'},{desc:'Емкость для авиационного топлива объемом 100м3'}]
+          //-     .row
+          //-       each val, index in dor_2
+          //-         .col-lg-3.col-xs-12.catalog-card_wrap
+          //-           .card.catalog-card
+          //-             .card-body.catalog-card_body-cont 
+          //-               img.catalog-card_img(src=`../../../img/catalog/emkosti/${index + 1}.jpg`)
+          //-             .card-footer.catalog-card_footer-cont= `${val.desc}`
     script(src="../../../js/libs.min.js") 
     script(src="../../../js/bundle.js")

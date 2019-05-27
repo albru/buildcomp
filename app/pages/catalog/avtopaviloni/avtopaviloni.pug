@@ -11,9 +11,31 @@ html(lang="ru")
     link(rel="stylesheet", href="../../../css/main.css")
   body.body
     .wrapper
-      include ../catalog-blocks/header
-      .dor-ogr.dor-ograzhd_wrap.section.section-margin
-      footer.footer
-        include ../catalog-blocks/footer
+      include ../../../pug/blocks/header
+      .avtopaviloni.avtopaviloni_wrap.section.section-margin
+        .container.catalog-cont 
+          .row.catalog-title_cont
+            .col-xs-12
+              h1.catalog_title Автопавильоны
+          .row.catalog-goods_cont
+            .col-xs-12
+              ul.avtopaviloni_list 
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A010.html").avtopaviloni_link Автопавильоны Серия А010
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A020.html").avtopaviloni_link Автопавильоны Серия А020
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A030.html").avtopaviloni_link Автопавильоны Серия А030
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A040.html").avtopaviloni_link Автопавильоны Серия А040
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A050.html").avtopaviloni_link Автопавильоны Серия А050
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A060.html").avtopaviloni_link Автопавильоны Серия А060
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A070.html").avtopaviloni_link Автопавильоны Серия А070
+                li.avtopaviloni_item 
+                  a(href="avtopaviloni_A090.html").avtopaviloni_link Автопавильоны Серия А080
+      include ../../../pug/blocks/footer
     script(src="../../../js/libs.min.js") 
     script(src="../../../js/bundle.js")
