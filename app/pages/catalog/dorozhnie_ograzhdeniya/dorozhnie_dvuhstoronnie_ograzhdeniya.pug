@@ -6,20 +6,20 @@ html(lang="ru")
     meta(name="keywords", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="shortcut icon", href="img/autoright.png")
+    link(rel="shortcut icon", href="../../../fav.png")
     link(rel="stylesheet", href="../../../css/libs.min.css")
     link(rel="stylesheet", href="../../../css/main.css")
   body.body
     .wrapper
-      include ../catalog-blocks/header
+      include ../../../pug/blocks/header
       .dor-ogr2.dor-ogr2_wrap.section.section-margin
         .container.catalog-cont 
           .row
             .col-xs-12
-              h1.catalog_title Дорожные двухсторонние ограждения барьерного типа
+              h1.catalog-title Дорожные двухсторонние ограждения барьерного типа
           .row
             .col-xs-12
-              - var dor_2 = [{desc: 'Дорожное двухстороннее ограждение 11ДДШ с У1 - У6'},{desc:'Дорожное двухстороннее ограждение 11ДДС с У2 - У6'},{desc:'Дорожное двухстороннее ограждение 11ДДЕ с У2 - У5'},{desc:'Дорожное двухстороннее ограждение усиленное балкой 11ДДСУБ с У6 - У10'},{desc:'Дорожное двухстороннее ограждение усиленное балкой 11ДДУБ с У4 - У8'},{desc:'Дорожное двухстороннее ограждение усиленное балкой 11ДДУБв с У4 - У7'},{desc:'Дорожное ограждение усиленное верхним ярусом 11ДДв с У6 - У10'},{desc:'Дорожное двухстороннее ограждение 3N 11ДДт с У4 - У7'},{desc:'Дорожное двухстороннее ограждение 3N с нижним ярусом 11ДДтн с У5 - У9'},{desc:'Дорожное двухстороннее ограждение 3N с верхним ярусом 11ДДтв с У7 - У10'}]
+              - const dor_2 = [{desc: 'Дорожное двухстороннее ограждение 11ДДШ с У1 - У6'},{desc:'Дорожное двухстороннее ограждение 11ДДС с У2 - У6'},{desc:'Дорожное двухстороннее ограждение 11ДДЕ с У2 - У5'},{desc:'Дорожное двухстороннее ограждение усиленное балкой 11ДДСУБ с У6 - У10'},{desc:'Дорожное двухстороннее ограждение усиленное балкой 11ДДУБ с У4 - У8'},{desc:'Дорожное двухстороннее ограждение усиленное балкой 11ДДУБв с У4 - У7'},{desc:'Дорожное ограждение усиленное верхним ярусом 11ДДв с У6 - У10'},{desc:'Дорожное двухстороннее ограждение 3N 11ДДт с У4 - У7'},{desc:'Дорожное двухстороннее ограждение 3N с нижним ярусом 11ДДтн с У5 - У9'},{desc:'Дорожное двухстороннее ограждение 3N с верхним ярусом 11ДДтв с У7 - У10'}]
               .row
                 each val, index in dor_2
                   .col-lg-3.col-xs-12.catalog-card_wrap
@@ -27,5 +27,7 @@ html(lang="ru")
                       .card-body.catalog-card_body-cont 
                         img.catalog-card_img(src=`../../../img/catalog/dorozhnie_ograzhdeniya/dor-ogr-2/${index + 1}.jpg`)
                       .card-footer.catalog-card_footer-cont= `${val.desc}`
+      footer.footer
+        include ../../../pug/blocks/footer
     script(src="../../../js/libs.min.js") 
     script(src="../../../js/bundle.js")

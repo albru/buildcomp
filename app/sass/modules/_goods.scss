@@ -3,9 +3,10 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
-@for $i from 0 through 11 {
+
+@for $i from 0 through 13 {
     .goods-item_icon#{$i} {
-        background: url('../img/goods_icon/cat#{$i}.png') center center no-repeat;
+        background: url('../img/goods_icon/cat#{$i}.png') center center no-repeat $green;
     }
 }
 
@@ -13,9 +14,16 @@
     &-cont {
         display: flex;
         justify-content: space-between;
+        @include laptop {
+            justify-content: space-around;
+        }
+        @include phones {
+            justify-content: center;
+        }
     }
     &-item {
         position: relative;
+        margin-bottom: rem(20px);
         &:hover .goods-item_icon {
             background-color: $darkgreen;
         }
@@ -31,23 +39,29 @@
             color: $gray;
             text-transform: uppercase;
             font-weight: bold;
-            margin-bottom: rem(20px);
+            @include laptop {
+                max-width: 215px;
+                display: flex;
+                justify-content: start;
+            }
         }
     }
     &-item:before {
         margin-right: 10px;
-        background-color: $green;
+
     }
     &-item_icon {
         display: inline-block;
         width: 44px;
         transition: all .3s;
         height: 44px;
-        background-color: $green;
+
         border-radius: 5px;
         position: absolute;
-        top:-10px;
-        left: -50px;
+        top:0;
+        left: -60px;
+        @include laptop {
+        }
     }
 }
 

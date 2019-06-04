@@ -3,19 +3,15 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
-.catalog {
-  &_title {
-    text-align: center;
-    &-h5 {
-      text-align: center;
-    }
-  }
-}
-
 .catalog-card {
+  transition: all .4s;
   box-shadow: 7px 9px 12px -8px $gray;
   color: $white;
   width: 100%;
+  &:hover {
+    transform: translateY(-20px);
+    z-index: 1;
+  }
   &_img {
     height: 200px;
     max-width: 100%;

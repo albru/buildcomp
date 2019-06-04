@@ -1,23 +1,22 @@
 .container
   .row.goods-cont
-    - var count = 0;
-    - var count4 = 4;
-    - var count8 = 8
-    .col-xs-3
+    .col-xs-12
       each val, index in [{name:'Дорожные ограждения', link: "../pages/catalog/dorozhnie_ograzhdeniya/dorozhnie_ograzhdeniya.html" },{name:'Фундаменты', link: "../pages/catalog/fundaments/fundaments.html" },{name:'Емкости для хранения', link: "../pages/catalog/emkosti/emkosti.html" },{name:'Битум', link: "../pages/catalog/bitum/bitum.html" }, {name:'Автопавильоны', link: "../pages/catalog/avtopaviloni/avtopaviloni.html" }]
         ul.goods-list
             li.goods-item
               a.goods-item_link(href=`${val.link}`)= val.name
-              .goods-item_icon(class=`goods-item_icon${count + index}`)
-    .col-xs-3
-      each val, index in [{name:'Мостовые ограждения', link: "../pages/catalog/mostovie_ograzhdeniya/mostovie_ograzhdeniya.html" },{name:'Дорожные знаки', link: "../pages/catalog/dorozhnie_znaki/dorozhnie_znaki.html" },{name:'Оборудование навесное', link: "../pages/catalog/oborudovanie_navesnoe/oborudovanie_navesnoe.html" },{name:'Производственное оборудование', link: "../pages/catalog/proizvodstvennoe-oborudovanie/proizvodstvennoe-oborudovanie.html" }]
+              .goods-item_icon(class=`goods-item_icon${index}`)
+    .col-xs-12
+      each val, index in [{name:'Мостовые ограждения', link: "../pages/catalog/mostovie_ograzhdeniya/mostovie_ograzhdeniya.html" },{name:'Дорожные знаки', link: "../pages/catalog/dorozhnie_znaki/dorozhnie_znaki.html" },{name:'Оборудование навесное', link: "../pages/catalog/oborudovanie_navesnoe/oborudovanie_navesnoe.html" },{name:'Производственное оборудование', link: "../pages/catalog/proizvodstvennoe-oborudovanie/proizvodstvennoe-oborudovanie.html"}, {name:'Опоры освещения', link: "../pages/catalog/opori_osvesheniya/opori_osvesheniya.html" }]
         ul.goods-list
             li.goods-item
               a.goods-item_link(href=`${val.link}`)= val.name
-              .goods-item_icon(class=`goods-item_icon${count + index}`)
-    .col-xs-3
-      each val, index in [{name:'Опоры освещения', link: "../pages/catalog/opori_osvesheniya/opori_osvesheniya.html" },{name:'Рамные конструкции', link: "../pages/catalog/ramnie-konstrukcii/ramnie-konstrukcii.html" }, {name:'Гофрированные трубы', link: "../pages/catalog/gofrirovannie_trubi/gofrirovannie_trubi.html" },{name:'Кронштейны', link: "../pages/catalog/kronshteini/kronshteini.html" }]
+              //- index + 5 (items in first column)
+              .goods-item_icon(class=`goods-item_icon${index + 5}`) 
+    .col-xs-12
+      each val, index in [{name:'Рамные конструкции', link: "../pages/catalog/ramnie-konstrukcii/ramnie-konstrukcii.html" }, {name:'Гофрированные трубы', link: "../pages/catalog/gofrirovannie_trubi/gofrirovannie_trubi.html" },{name:'Кронштейны', link: "../pages/catalog/kronshteini/kronshteini.html"},{name:'Краска для дорожной разметки', link: "../pages/catalog/kraska_dlya_dorozhnoi_razmetki/kraska_dlya_dorozhnoi_razmetki.html"}]
         ul.goods-list
             li.goods-item
               a.goods-item_link(href=`${val.link}`)= val.name
-              .goods-item_icon(class=`goods-item_icon${count + index}`)
+              //- index + 10 (5 items in first column, 5 items in second column)
+              .goods-item_icon(class=`goods-item_icon${index + 10}`)

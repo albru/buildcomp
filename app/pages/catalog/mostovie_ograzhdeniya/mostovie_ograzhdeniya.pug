@@ -6,23 +6,26 @@ html(lang="ru")
     meta(name="keywords", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="shortcut icon", href="img/autoright.png")
+    link(rel="shortcut icon", href="../../../fav.png")
     link(rel="stylesheet", href="../../../css/libs.min.css")
     link(rel="stylesheet", href="../../../css/main.css")
   body.body
     .wrapper
-      include ../catalog-blocks/header
+      include ../../../pug/blocks/header
       .most-ogr.most-ogr_wrap.section.section-margin
         .container.catalog-cont 
           .row.catalog-title_cont
             .col-xs-12
-              h1.catalog_title Дорожные ограждения
+              h1.catalog-title Мостовые ограждения
           .row.catalog-goods_cont
             .col-xs-12
-              ul.most-ogr_list 
-                li.most-ogr_item 
-                  a(href="mostovie_dvuhstoronnie_ograzhdeniya.html").most-ogr_link Мостовые двухсторонние ограждения барьерного типа
-                li.most-ogr_item 
-                  a(href="mostovie_odnostoronnie_ograzhdeniya.html").most-ogr_link Мостовые односторонние ограждения барьерного типа
+              //- classes .btn .btn_link .catalog-list and other is declared in the catalog-section.scss
+              ul.most-ogr_list.catalog-list 
+                li.most-ogr_item.btn.catalog-btn 
+                  a.catalog-btn_link(href="mostovie_dvuhstoronnie_ograzhdeniya.html").most-ogr_link Мостовые двухсторонние ограждения барьерного типа
+                li.most-ogr_item.btn.catalog-btn 
+                  a.catalog-btn_link(href="mostovie_odnostoronnie_ograzhdeniya.html").most-ogr_link Мостовые односторонние ограждения барьерного типа
+      footer.footer
+        include ../../../pug/blocks/footer
     script(src="../../../js/libs.min.js") 
     script(src="../../../js/bundle.js")

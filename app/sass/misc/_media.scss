@@ -1,9 +1,15 @@
 @import "../misc/mixins.scss";
-
 $laptop: 1233px;
 $tablets: 992px;
 $phones: 768px;
 $phones-min: 576px;
+$big-desktop: 1400px;
+
+@mixin big_desktop {
+  @media screen and (min-width: $big-desktop) {
+    @content;
+  }
+}
 
 @mixin desktop {
   @media screen and (min-width: $laptop) {

@@ -3,7 +3,41 @@
 @import "../misc/mixins";
 @import "../misc/variables";
 
+.logo {
+  margin-left: rem(10px);
+  font-size: rem(20px);
+  color: $darkgreen;
+  font-family: $russo;
+  &:hover, :focus, :active {
+    color: $darkgreen;
+    text-decoration: none;
+  }
+}
+
 .header {
+  &-phone {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: -140px;
+    transform: translateY(-50%);
+    @include big_desktop {
+      display: block;
+    }
+    &_link {
+      color: $darkgreen;
+      text-transform: uppercase;
+      font-family: $russo;
+      font-size: rem(15px);
+      &:hover, :focus, :active {
+        text-decoration: none;
+        color: $darkgreen;
+      }
+    }
+  }
+  &-container {
+    position: relative;
+  }
   &-wrapper {
     position: fixed;
     left: 0;
@@ -17,8 +51,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: rem(50px);
   }
   &-logo {
     color: $white;
+    z-index: 20;
   }
 }

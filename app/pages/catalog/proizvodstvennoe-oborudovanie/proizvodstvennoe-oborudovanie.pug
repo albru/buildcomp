@@ -6,21 +6,21 @@ html(lang="ru")
     meta(name="keywords", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="shortcut icon", href="img/autoright.png")
+    link(rel="shortcut icon", href="../../../fav.png")
     link(rel="stylesheet", href="../../../css/libs.min.css")
     link(rel="stylesheet", href="../../../css/main.css")
   body.body
     .wrapper
-      include ../catalog-blocks/header
+      include ../../../pug/blocks/header
       .oborud-proizv.oborud-proizv_wrap.section.section-margin
         .container.catalog-cont 
           .row.catalog-title_cont
             .col-xs-12
-              h1.catalog_title Производственное оборудование
-              p.catalog_desc Компания «Дорожные Системы» поставляет оборудование, необходимое при производстве асфальтобетонных смесей, перекачивания и нагрева органических вяжущих материалов (битумы различных марок, дегти, битумные эмульсии) с вязкостью до 150 м2/с и рабочей температурой до +180 градусов С.
+              h1.catalog-title Производственное оборудование
+              p.catalog-desc Компания «Дорожные Системы» поставляет оборудование, необходимое при производстве асфальтобетонных смесей, перекачивания и нагрева органических вяжущих материалов (битумы различных марок, дегти, битумные эмульсии) с вязкостью до 150 м2/с и рабочей температурой до +180 градусов С.
           .row.catalog-goods_cont
             .col-xs-12
-              - var proizvod_oborudov = [{desc: 'Установка смесительная асфсльтобетонная УСА-50'},{desc: 'Станция насосная битумная СН-500'},{desc: 'Битумный насос НБ-2.0'},{desc: 'Котел битумный - модели СИ-201'}]
+              - const proizvod_oborudov = [{desc: 'Установка смесительная асфсльтобетонная УСА-50'},{desc: 'Станция насосная битумная СН-500'},{desc: 'Битумный насос НБ-2.0'},{desc: 'Котел битумный - модели СИ-201'}]
               .row
                 each val, index in proizvod_oborudov
                   .col-lg-3.col-xs-12.catalog-card_wrap
@@ -28,5 +28,7 @@ html(lang="ru")
                       .card-body.catalog-card_body-cont 
                         img.catalog-card_img(src=`../../../img/catalog/proizvodstvennoe_oborudovanie/${index + 1}.jpg`)
                       .card-footer.catalog-card_footer-cont= `${val.desc}`
+      footer.footer
+        include ../../../pug/blocks/footer
     script(src="../../../js/libs.min.js") 
     script(src="../../../js/bundle.js")

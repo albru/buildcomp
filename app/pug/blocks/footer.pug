@@ -1,58 +1,62 @@
+//- const url is declared in nav.pug
 .container-fluid
   .container.footer-cont
     .row.footer-cont_contacts
       .col-lg-2.footer-nav
         ul.footer-nav
-          li.footer-nav_item
-            a.footer-nav_link(href="").footer-nav_about О компании
-          li.footer-nav_item
-            a.footer-nav_link(href="").footer-nav_news Новости
-          li.footer-nav_item
-            a.footer-nav_link(href="").footer-nav_docs Документы
-          li.footer-nav_item
-            a.footer-nav_link(href="").footer-nav_to-main Главная
+          li.footer-nav_item.contacts-bold_item
+            a.footer-nav_link(href=`${url}index.html`).footer-nav_to-main Главная
+          li.footer-nav_item.contacts-bold_item
+            a.footer-nav_link(href=`${url}pages/about.html`).footer-nav_about О компании
+          li.footer-nav_item.contacts-bold_item
+            a.footer-nav_link(href=`${url}pages/news.html`).footer-nav_news Новости
+          li.footer-nav_item.contacts-bold_item
+            a.footer-nav_link(href=`${url}pages/docs.html`).footer-nav_docs Документы
       .col-lg-3.footer-links
         ul.footer-links_list
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_phone Дорожные ограждения
+            a.footer-links_link(href=`${url}pages/catalog/dorozhnie_ograzhdeniya/dorozhnie_ograzhdeniya.html`).footer-contacts_phone Дорожные ограждения
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_email Автопавильоны
+            a.footer-links_link(href=`${url}pages/catalog/avtopaviloni/avtopaviloni.html`).footer-contacts_email Автопавильоны
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Фундаменты
+            a.footer-links_link(href=`${url}pages/catalog/fundaments/fundaments.html`).footer-contacts_adress Фундаменты
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Емкости для хранения
+            a.footer-links_link(href=`${url}pages/catalog/emkosti/emkosti.html`).footer-contacts_adress Емкости для хранения
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Краска для дорожной разметки
-      .col-lg-3.footer-links
-        ul.footer-links_list
-          li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_phone Мостовые ограждения
-          li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_email Дорожные знаки
-          li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Оборудование навесное
-          li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Производственное оборудование
-          li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Битум
+            a.footer-links_link(href=`${url}pages/catalog/kraska_dlya_dorozhnoi_razmetki/kraska_dlya_dorozhnoi_razmetki.html`).footer-contacts_adress Краска для дорожной разметки
       .col-lg-2.footer-links
         ul.footer-links_list
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_phone Опоры освещения
+            a.footer-links_link(href=`${url}pages/catalog/mostovie_ograzhdeniya/mostovie_ograzhdeniya.html`).footer-contacts_phone Мостовые ограждения
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_email Гофрированные трубы
+            a.footer-links_link(href=`${url}pages/catalog/proizvodstvennoe-oborudovanie/proizvodstvennoe-oborudovanie.html`).footer-contacts_adress Производственное оборудование
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Кронштейны
+            a.footer-links_link(href=`${url}pages/catalog/oborudovanie_navesnoe/oborudovanie_navesnoe.html`).footer-contacts_adress Оборудование навесное
           li.footer-links_item
-            a.footer-links_link(href="").footer-contacts_adress Рамные конструкции
-      .col-lg-2.footer-contacts
+            a.footer-links_link(href=`${url}pages/catalog/bitum/bitum.html`).footer-contacts_adress Битум
+      .col-lg-2.footer-links
+        ul.footer-links_list
+          li.footer-links_item
+            a.footer-links_link(href=`${url}pages/catalog/opori_osvesheniya/opori_osvesheniya.html`).footer-contacts_phone Опоры освещения
+          li.footer-links_item
+            a.footer-links_link(href=`${url}pages/catalog/gofrirovannie_trubi/gofrirovannie_trubi.html`).footer-contacts_email Гофрированные трубы
+          li.footer-links_item
+            a.footer-links_link(href=`${url}pages/catalog/kronshteini/kronshteini.html`).footer-contacts_adress Кронштейны
+          li.footer-links_item
+            a.footer-links_link(href=`${url}pages/catalog/ramnie-konstrukcii/ramnie-konstrukcii.html`).footer-contacts_adress Рамные конструкции
+          li.footer-links_item
+            a.footer-links_link(href=`${url}pages/catalog/dorozhnie_znaki/dorozhnie_znaki.html`).footer-contacts_email Дорожные знаки
+      .col-lg-3.footer-contacts
         ul.footer-contacts_list
           li.footer-contacts_item
-            a.footer-contacts_link(href="").footer-contacts_phone 8-999-989-99-19
+            span.contacts-bold_item Тел.: 
+            a.footer-contacts_link(href="tel:+79817338484").footer-contacts_phone +7 (921) 921 75 44 
           li.footer-contacts_item
-            a.footer-contacts_link(href="").footer-contacts_email contact@tehdor-invest.org
+            span.contacts-bold_item E-mail: 
+            a.footer-contacts_link(href="mailto:info@td-invest.org").footer-contacts_email info@td-invest.org
           li.footer-contacts_item
-            span.footer-contacts_link(href="").footer-contacts_adress Санкт - Петербург
+            span.contacts-bold_item Адрес: 
+            span.footer-contacts_adress Санкт - Петербург, ул. Маяковского, д. 18
     .row.footer-rules
       .col-lg-12.footer-rules_cont
         p.footer-rules_text Все материалы являются собственностью компании. Копирование запрещено

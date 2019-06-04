@@ -3,11 +3,41 @@
 @import "../misc/mixins";
 @import "../misc/media";
 
-.tabs-wrap {
-  @include flex();
+.nav-link {
+  color: $darkgreen;
+  &:hover {
+    color: $green;
+  }
+}
+.docs {
+  &-desktop_cont {
+    @include flex();
+  }
+  &-files {
+    @include laptop {
+      display: none;
+    }
+  }
+  &-desktop_tab-cont {
+    border: 3px solid $darkgreen;
+    border-radius: rem(3px);
+  }
+  &-file_item {
+    width: 100%;
+    min-height: rem(400px);
+  }
+  &-mobile {
+    display: none;
+    @include laptop {
+      display: flex;
+    }
+    &_item {
+      display: flex; 
+      justify-content: space-between;
+    }
+    &_link {
+      margin-left: 20px;
+    }
+  }
 }
 
-.docs-cont {
-  width: 1000px;
-  height: 1000px;
-}

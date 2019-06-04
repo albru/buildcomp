@@ -54,6 +54,9 @@ body {
 .section-margin {
   margin-top: rem(50px);
   margin-bottom: rem(50px);
+  @include laptop {
+    padding: rem(20px);
+  }
 }
 
 .clearfix {

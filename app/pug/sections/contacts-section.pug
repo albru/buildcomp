@@ -3,16 +3,20 @@
     .col-xs-12
       h1.contacts-title Контакты
   .row
-    .col-lg-8
+    .col-lg-7
       .contacts-img
-    .col-lg-4.contacts-info
+        iframe(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ae3a889a375869b8f7d3d210251fe68e459a446c66e91ba42128e24952008c53b&source=constructor', width='100%', height='330', frameborder='1')
+    .col-lg-5.contacts-info
       ul.contacts-list
-        li.contacts-item 
-          h5 ООО «Дорожные Cистемы» 
-        li.contacts-item Адрес: 195027, Санкт-Петербург, ул. 
-        li.contacts-item Магнитогорская, д. 51, литер Ж, офис 342 
-        li.contacts-item 
-          a(href="tel: +79817338484") Тел.: +7 (981) 999-99-99
-        li.contacts-item Факс: +7 (812) 220-22-14
-        li.contacts-item 
-          a(href="mailto: info@111.ru ") E-mail:info@td-invest.org 
+        li.contacts-item  
+          h5.contacts-title_second ООО «ТЕХДОРИНВЕСТ» 
+        li.contacts-item
+          span.contacts-bold_item Адрес: 
+          span Санкт-Петербург, ул. Маяковского, д. 18
+        li.contacts-item
+          span.contacts-bold_item Тел.:  
+          a(href="tel:+79817338484") +7 (921) 921 75 44 
+          .director Зам. коммерческого директора Антон  
+        li.contacts-item
+          span.contacts-bold_item E-mail: 
+          a(href="mailto:info@td-invest.org") info@td-invest.org 

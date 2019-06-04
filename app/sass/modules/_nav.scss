@@ -4,7 +4,14 @@
 @import "../misc/variables";
 @import "../animation/anim";
 
+.nav-wrapper {
+  position: relative;
+}
+
 .nav-main {
+  @include laptop {
+    display: none;
+  }
   &_cont {
     padding: 0;
   }
@@ -14,8 +21,7 @@
   &_list{
     text-transform: uppercase;
     @include flex();
-    
-  }
+    }
   &_link {
     color: $white;
     font-family: $russo;
@@ -25,7 +31,6 @@
     vertical-align: middle;
     &:hover, &:focus, &:active {
       color: $darkgreen;
-
     }
   }
 }

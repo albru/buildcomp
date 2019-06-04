@@ -12,6 +12,11 @@
   }
   &-card {
     box-shadow: 7px 9px 12px -8px $gray;
+    transition: all .4s;
+    &:hover {
+      transform: translateY(-20px);
+      z-index: 1;
+    }
     &_wrap {
       margin: rem(10px) 0;
     }
